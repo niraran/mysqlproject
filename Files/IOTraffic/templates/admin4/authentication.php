@@ -15,19 +15,15 @@ if ($user&&$pass)
 $connection = mysql_connect($db_host,$db_username,$db_pass);
 //$connect = mysql_connect("$server","$username","$password") or die("not connecting");
 mysql_select_db($db_name) or die("no db :'(");
-$queryuser = mysql_query("SELECT * FROM users WHERE user_name='$user'");
-$querypass = mysql_query("SELECT * FROM users WHERE password='$pass'");
+$queryuser = mysql_query("SELECT * FROM users WHERE user_name=='$user'");
+$querypass = mysql_query("SELECT * FROM users WHERE password=='$pass'");
 
 $numrows = mysql_num_rows($queryuser);
 
 if ($numrows!=0)
 {
-//while loop
-  while ($rowu = mysql_fetch_assoc($queryuser) && $rowp = mysql_fetch_assoc($querypass))
-  {
 
-    $user = $rowu['user_name']&&
-    $pass = $rowp['password'];
+if  ($user == $queryuser && $pass == $querypass){
 	header("location:traffic_index.html");
   }
   //else
