@@ -18,16 +18,11 @@ mysql_select_db($db_name) or die("no db :'(");
 $queryuser = mysql_query("SELECT * FROM users WHERE user_name=='$user'");
 $querypass = mysql_query("SELECT * FROM users WHERE password=='$pass'");
 
-$numrows = mysql_num_rows($queryuser);
-
-if ($numrows!=0)
-{
 
 if  ($user == $queryuser && $pass == $querypass){
 	header("location:traffic_index.html");
   }
-  //else
-   //   die("incorrect username/password!");
+
 }
 else
   echo "user does not exist!";
