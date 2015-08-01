@@ -16,11 +16,15 @@ if ($temp_user == $username){
   $temp_pass = mysql_result($resultpass,$i);
   //echo mysql_result($temp_pass,$i);
   if($temp_pass == $password){
-    echo "grate";
+    $queryrole = "SELECT permision FROM users WHERE user_name = $username";
+    $resultrole = mysql_query($queryrole);
+    $temp_role = mysql_result($resultrole,$i);
+    $temp_role = $_GET;
     header("location:index.php");
+
   }
   else {
-    header("location:login.php");
+  header("location:login.php");
 
   }
 
@@ -28,5 +32,6 @@ if ($temp_user == $username){
 }
 else {
 header("location:login.php");
+
 }
 ?>
