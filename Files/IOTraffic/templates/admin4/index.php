@@ -74,199 +74,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
-	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start active ">
-					<a href="index.php">
-					<i class="icon-home"></i>
-					<span class="title">מסך הבית</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bulb"></i>
-					<span class="title">רמזורים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="traffic_light_all.php">
-							<i class="icon-home"></i>
-							כל הרמזורים
-							</a>
-						</li>
-						<li>
-							<a href="traffic_light_add.php">
-							<i class="icon-plus"></i>
-							הוספת רמזור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת רמזור
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת רמזור
-							</a>
-						</li>
-					</ul>
-				</li>
-								<li>
-					<a href="javascript:;">
-					<i class="icon-target"></i>
-					<span class="title">צמתים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="crossroad_all.php">
-							<i class="icon-home"></i>
-							כל הצמתים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת צומת</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת צומת
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת צומת
-							</a>
-						</li>					
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-camcorder"></i>
-					<span class="title">מצלמות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="camera_all.php">
-							<i class="icon-home"></i>
-							כל המצלמות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת מצלמה</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת מצלמה
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת מצלמה
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">דוחות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="reports_all.php">
-							<i class="icon-home"></i>
-							כל הדוחות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח ארועים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח טיפול בעומסים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח זמני עומסים</a>
-						</li>							
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bell"></i>
-					<span class="title">ארועים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="events_all.php">
-							<i class="icon-home"></i>
-							כל הארועים</a>
-						</li>
-						<li>
-							<a href="event_new.php">
-							<i class="icon-plus"></i>
-							יצירת אירוע חדש</a>
-						</li>
-						<li>
-							<a href="events_active.php">
-							<i class="icon-check"></i>
-							ארועים פעילים</a>
-						</li>					
-						<li>
-							<a href="events_pending_open.php">
-							<i class="fa fa-clock-o"></i>
-							ארועים ממתינים לאישור</a>
-						</li>						
-						<li>
-							<a href="events_history.php">
-							<i class="fa fa-history"></i>
-							ארועים היסטוריים</a>
-						</li>							
-					</ul>
-				</li>				
-				<li class="last ">
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="title">מפות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="maps_live.php">
-							מפת תנועה</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
+	<!-- BEGIN SIDEBAR -->	
+	<?php $Primary = 1; $Secondary = 0; include 'views\Menu.php'; ?>
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
@@ -280,16 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- END PAGE TITLE -->
 			</div>
 			<!-- END PAGE HEAD -->
-			<!-- BEGIN PAGE BREADCRUMB -->
-			<ul class="page-breadcrumb breadcrumb hide">
-				<li>
-					<a href="#">Home</a><i class="fa fa-circle"></i>
-				</li>
-				<li class="active">
-					 Dashboard
-				</li>
-			</ul>
-			<!-- END PAGE BREADCRUMB -->
+
 			<!-- BEGIN PAGE CONTENT INNER -->
 			<div class="row margin-top-10">
 				<a href="events_active_police.php">
@@ -480,14 +280,14 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 					</div>
 				</a>
-				<a href="events_all.php">
+				<a href="events_active.php">
 					<div class="tile double bg-blue-hoki">
 						<div class="tile-body">
 							<i class="fa fa-bell-o"></i>
 						</div>
 						<div class="tile-object">
 							<div class="name">
-								 ארועים
+								ארועים פעילים
 							</div>
 							<div class="number">
 								 <?php echo mysql_result($all_open_events_count,0); ?>
@@ -538,9 +338,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="general-item-list">
 
 									<?php
-									//$query="SELECT * FROM events";
-									//$result=mysql_query($query);
-									//$num=mysql_numrows($result);
 									$i=0;
 									while ($i < $num)
 									{
@@ -553,6 +350,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										//$currentTime = time() + 3600;
 										//$c_time = date('H:i',$currentTime);
 										
+										$location_id = mysql_result($result,$i,"id_location") ;
+										$lat = mysql_result(mysql_query("SELECT lat from location where id_location=$location_id",$connection),0) ;
+										$lng = mysql_result(mysql_query("SELECT lng from location where id_location=$location_id",$connection),0) ;									
+
+									
 									
 									//if ($eventStatus == 'open')
 									//{	
@@ -579,7 +381,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										{
 										echo			'<img class="item-pic" src="../../assets/admin/layout4/img/avatar.png">' ;	
 										}
-										echo			'<a href="" class="item-name primary-link"> '.mysql_result($result,$i,"eventName").'</a>' ;
+										echo			'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'" class="item-name primary-link"> '.mysql_result($result,$i,"eventName").'</a>' ;
 										echo			'<span class="item-label">'.$event_time.'</span>' ;
 										echo		'</div>' ;
 										if (mysql_result($result,$i,"eventStatus") == 'open')
@@ -601,8 +403,12 @@ License: You must have a valid license purchased only from themeforest(the above
 										echo		 '<br>' ;
 										echo		  '<u>תיאור האירוע:</u> ' ;
 										echo		  mysql_result($result,$i,"eventDescription") ;
+										echo		 '<br>' ;
+										echo		  '<u>מיקום האירוע:</u> ' ;
+										echo '<a href="https://maps.google.com/?q='.$lat.','.$lng.'" dir="ltr" target="_blank">'.$lat.','.$lng.'</a>' ;							
 										echo	'</div>' ;
 										echo '</div>' ;
+
 									//}
 									$i++;	
 									}
@@ -618,7 +424,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet light">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="icon-pointer"></i>מפת תנועה בזמן אמת
+								<i class="icon-pointer"></i>מפת תנועה בזמן אמת + ארועים פעילים
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -654,14 +460,7 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="page-footer-inner">
-		 2015 &copy; IOTraffic
-	</div>
-	<div class="scroll-to-top">
-		<i class="icon-arrow-up"></i>
-	</div>
-</div>
+<?php include 'views\footer.php' ;?>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
@@ -711,7 +510,7 @@ License: You must have a valid license purchased only from themeforest(the above
 function initialize() {
   var myLatlng = new google.maps.LatLng(32.085300, 34.781768);
   var mapOptions = {
-    zoom: 12,
+    zoom: 14,
     center: myLatlng
   }
 
@@ -720,27 +519,62 @@ function initialize() {
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
 
-//-------------------------------------------------------
-var marker3=new google.maps.Marker({
-  position: new google.maps.LatLng(32.07054708796667, 34.77864876353124),
-  icon:'Policeman.png'
-  });
-
-marker3.setMap(map);
-
-var infowindow3 = new google.maps.InfoWindow({
-  content:"ארוע משטרה"
-  });
-
-google.maps.event.addListener(marker3, 'click', function() {
-  infowindow3.open(map,marker3);
-  });  
-
-//-------------------------------------------------------
   
+<?php
+	//mysql_result($result2,$i,"id_trafficLight")
+	$i=0;
+	//$line=1;
+	while ($i < $num)
+	{
+		if (mysql_result($result,$i,"eventStatus") == 'open')
+		{
+			$location_id = mysql_result($result,$i,"id_location") ;
+			$lat = mysql_result(mysql_query("SELECT lat from location where id_location=$location_id",$connection),0) ;
+			$lng = mysql_result(mysql_query("SELECT lng from location where id_location=$location_id",$connection),0) ;
+			$preview = '<a href=\'event_single.php?EVT='.mysql_result($result,$i,"id_event").'\'>'.mysql_result($result,$i,"eventName").'</a>' ;
+			
+			if (mysql_result($result,$i,"eventCategory") == 'POLICE')
+			{
+			$icon =	'Policeman2.png' ;
+			}
+			elseif (mysql_result($result,$i,"eventCategory") == 'MDA')
+			{
+			$icon =	'MDAman.png' ;	
+			}
+			elseif (mysql_result($result,$i,"eventCategory") == 'FIRE')
+			{
+			$icon =	'Fireman.png' ;	
+			}
+			elseif (mysql_result($result,$i,"eventCategory") == 'MUNICIPALITY')
+			{
+			$icon =	'municipality-icon.png' ;	
+			}
+			elseif (mysql_result($result,$i,"eventCategory") == 'OTHER')
+			{
+			$icon =	'otherman.png' ;	
+			}			
+			
+			echo 'var marker'.$i.'=new google.maps.Marker({' ;
+			echo   'position: new google.maps.LatLng('.$lat.', '.$lng.'),' ;
+			echo   'icon:\''.$icon.'\'' ;
+			echo   '});' ;
+
+			echo 'marker'.$i.'.setMap(map);' ;
+		
+			echo 'var infowindow'.$i.' = new google.maps.InfoWindow({' ;
+			echo  'content:"'.$preview.'"' ;
+			echo  '});' ;
+
+			echo 'google.maps.event.addListener(marker'.$i.', \'click\', function() {' ;
+			echo   'infowindow'.$i.'.open(map,marker'.$i.');' ;
+			echo   '}); ' ;
+		}
+		$i++;
+	}
+		
+?>	
+
 }
-
-
 
 google.maps.event.addDomListener(window, 'load', initialize);
 

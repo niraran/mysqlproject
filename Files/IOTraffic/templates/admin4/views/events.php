@@ -87,7 +87,7 @@
 										$time = $datetime->format('H:i:s');
 										
 										echo '<li>' ;
-										echo 	'<a href="javascript:;">' ;
+										echo 	'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo 	'<span class="time">'.$time.'</span>' ;
 										echo	'<span class="details">' ;
 										echo	'<span class="label label-sm label-icon">' ;
@@ -232,9 +232,8 @@
 										$datetime = new DateTime($myvalue);
 										//$date = $datetime->format('Y-m-d');
 										$time = $datetime->format('H:i:s');
-										
 										echo '<li>' ;
-										echo 	'<a href="javascript:;">' ;
+										echo 	'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo 	'<span class="time">'.$time.'</span>' ;
 										echo	'<span class="details">' ;
 										echo	'<span class="label label-sm label-icon">' ;
@@ -243,7 +242,7 @@
 										echo	mysql_result($result,$i,"eventName") ;
 										echo 	'</span>' ;
 										echo	'</a>' ;									
-										echo '</li>' ;
+										echo '</li>' ;	
 									}
 									$i++;	
 									}

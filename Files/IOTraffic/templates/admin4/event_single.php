@@ -68,8 +68,10 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 <?php
-$event_id = 8 ;
+$param1 = $_GET['EVT']; //GET Event id
 
+$event_id = $param1 ;
+//$event_id = 8 ;
 
 $myvalue = mysql_result(mysql_query("SELECT startTime from events where id_event=$event_id",$connection),0);
 $datetime = new DateTime($myvalue);
@@ -86,198 +88,7 @@ $event_timeEnd = $datetimeEnd->format('H:i:s');
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start">
-					<a href="index.php">
-					<i class="icon-home"></i>
-					<span class="title">מסך הבית</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bulb"></i>
-					<span class="title">רמזורים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="traffic_light_all.php">
-							<i class="icon-home"></i>
-							כל הרמזורים
-							</a>
-						</li>
-						<li>
-							<a href="traffic_light_add.php">
-							<i class="icon-plus"></i>
-							הוספת רמזור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת רמזור
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת רמזור
-							</a>
-						</li>
-					</ul>
-				</li>
-								<li>
-					<a href="javascript:;">
-					<i class="icon-target"></i>
-					<span class="title">צמתים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="crossroad_all.php">
-							<i class="icon-home"></i>
-							כל הצמתים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת צומת</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת צומת
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת צומת
-							</a>
-						</li>					
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-camcorder"></i>
-					<span class="title">מצלמות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="camera_all.php">
-							<i class="icon-home"></i>
-							כל המצלמות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת מצלמה</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת מצלמה
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת מצלמה
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">דוחות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="reports_all.php">
-							<i class="icon-home"></i>
-							כל הדוחות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח ארועים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח טיפול בעומסים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח זמני עומסים</a>
-						</li>							
-					</ul>
-				</li>
-				<li class="active">
-					<a href="javascript:;">
-					<i class="icon-bell"></i>
-					<span class="title">ארועים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="events_all.php">
-							<i class="icon-home"></i>
-							כל הארועים</a>
-						</li>
-						<li>
-							<a href="event_new.php">
-							<i class="icon-plus"></i>
-							יצירת אירוע חדש</a>
-						</li>
-						<li>
-							<a href="events_active.php">
-							<i class="icon-check"></i>
-							ארועים פעילים</a>
-						</li>					
-						<li>
-							<a href="events_pending_open.php">
-							<i class="fa fa-clock-o"></i>
-							ארועים ממתינים לאישור</a>
-						</li>						
-						<li>
-							<a href="events_history.php">
-							<i class="fa fa-history"></i>
-							ארועים היסטוריים</a>
-						</li>							
-					</ul>
-				</li>				
-				<li class="last ">
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="title">מפות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="maps_live.php">
-							מפת תנועה</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
+	<?php $Primary = 6; $Secondary = 0; include 'views\Menu.php'; ?>
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
@@ -418,7 +229,13 @@ $event_timeEnd = $datetimeEnd->format('H:i:s');
 											}
 										?>	
 												<li>
-													 <strong>מיקום: </strong> <?php echo mysql_result(mysql_query("SELECT id_location from events where id_event=$event_id",$connection),0); ?>
+													 <strong>מיקום: </strong>
+													<?php
+														$location_id = mysql_result(mysql_query("SELECT id_location from events where id_event=$event_id",$connection),0);
+														$lat = mysql_result(mysql_query("SELECT lat from location where id_location=$location_id",$connection),0) ;
+														$lng = mysql_result(mysql_query("SELECT lng from location where id_location=$location_id",$connection),0) ;
+														echo '<a href="https://maps.google.com/?q='.$lat.','.$lng.'" dir="ltr" target="_blank">'.$lat.','.$lng.'</a>' ;
+													 ?>		
 												</li>
 										</ul>
 									</div>
@@ -436,6 +253,15 @@ $event_timeEnd = $datetimeEnd->format('H:i:s');
 									אירוע ממתין לאישור <i class="fa fa-check"></i>
 									</a>
 									-->
+									<?php	
+											if (mysql_result(mysql_query("SELECT eventStatus from events where id_event=$event_id",$connection),0) == 'open' )
+											{
+												echo '<br><br>' ;
+												echo '<a href="query/CLOSE_EVT.php?param1='.$event_id.'&amp;param2=close" class="btn btn-lg red hidden-print margin-bottom-5" style="opacity: 1;">' ;
+												echo 'סגירת אירוע <i class="fa fa-history"></i>' ;
+												echo '</a>' ;
+											}	
+									?>
 								</p>								
 							</div>
 							<div class="col-xs-8">
@@ -483,14 +309,7 @@ $event_timeEnd = $datetimeEnd->format('H:i:s');
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="page-footer-inner">
-		 2015 &copy; IOTraffic
-	</div>
-	<div class="scroll-to-top">
-		<i class="icon-arrow-up"></i>
-	</div>
-</div>
+<?php include 'views\footer.php';?>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
@@ -521,7 +340,7 @@ $event_timeEnd = $datetimeEnd->format('H:i:s');
 
 <script> <!-- dolev -->
 function initialize() {
-  var myLatlng = new google.maps.LatLng(32.07054708796667, 34.77864876353124);
+  var myLatlng = new google.maps.LatLng(<?php echo $lat.','.$lng ?>);
   var mapOptions = {
     zoom: 18,
     center: myLatlng
@@ -532,20 +351,46 @@ function initialize() {
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
 
+	<?php
+	if (mysql_result(mysql_query("SELECT eventCategory from events where id_event=$event_id",$connection),0) == 'POLICE')
+		{
+		$icon =	'Policeman2.png' ;
+		}
+		elseif (mysql_result(mysql_query("SELECT eventCategory from events where id_event=$event_id",$connection),0) == 'MDA')
+		{
+		$icon =	'MDAman.png' ;	
+		}
+		elseif (mysql_result(mysql_query("SELECT eventCategory from events where id_event=$event_id",$connection),0) == 'FIRE')
+		{
+		$icon =	'Fireman.png' ;	
+		}
+		elseif (mysql_result(mysql_query("SELECT eventCategory from events where id_event=$event_id",$connection),0) == 'MUNICIPALITY')
+		{
+		$icon =	'municipality-icon.png' ;	
+		}
+		elseif (mysql_result(mysql_query("SELECT eventCategory from events where id_event=$event_id",$connection),0) == 'OTHER')
+		{
+		$icon =	'otherman.png' ;	
+		}			
+
+	$preview = 'אירוע #'.$event_id ;
+	?>	 
+  
+  
 //-------------------------------------------------------
-var marker3=new google.maps.Marker({
-  position: new google.maps.LatLng(32.07054708796667, 34.77864876353124),
-  icon:'Policeman.png'
+var marker1=new google.maps.Marker({
+  position: new google.maps.LatLng(<?php echo $lat.','.$lng ?>),
+  icon:'<?php echo $icon ?>'
   });
 
-marker3.setMap(map);
+marker1.setMap(map);
 
-var infowindow3 = new google.maps.InfoWindow({
-  content:"ארוע משטרה"
+var infowindow1 = new google.maps.InfoWindow({
+  content:"<?php echo $preview ?>"
   });
 
-google.maps.event.addListener(marker3, 'click', function() {
-  infowindow3.open(map,marker3);
+google.maps.event.addListener(marker1, 'click', function() {
+  infowindow1.open(map,marker1);
   });  
 
 //-------------------------------------------------------

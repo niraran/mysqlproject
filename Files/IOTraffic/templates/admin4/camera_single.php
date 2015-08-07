@@ -19,7 +19,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
 <meta charset="utf-8"/>
 <title>IOTraffic | Smart Traffic</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta content="" name="description"/>
@@ -55,6 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
 <body class="page-header-fixed page-sidebar-closed-hide-logo ">
 <!-- BEGIN DB -->
 <?php include 'views\DataBase.php';?>
@@ -68,204 +69,16 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- Camera ID -->
 <?php
-$camera_id = 12 ;
+$param1 = $_GET['CAM']; //GET Cross Road id
+
+$camera_id = $param1 ;
+//$camera_id = 823 ;
 ?>
 
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start">
-					<a href="index.php">
-					<i class="icon-home"></i>
-					<span class="title">מסך הבית</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bulb"></i>
-					<span class="title">רמזורים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="traffic_light_all.php">
-							<i class="icon-home"></i>
-							כל הרמזורים
-							</a>
-						</li>
-						<li>
-							<a href="traffic_light_add.php">
-							<i class="icon-plus"></i>
-							הוספת רמזור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת רמזור
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת רמזור
-							</a>
-						</li>
-					</ul>
-				</li>
-								<li>
-					<a href="javascript:;">
-					<i class="icon-target"></i>
-					<span class="title">צמתים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="crossroad_all.php">
-							<i class="icon-home"></i>
-							כל הצמתים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת צומת</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת צומת
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת צומת
-							</a>
-						</li>					
-					</ul>
-				</li>
-				<li class="active">
-					<a href="javascript:;">
-					<i class="icon-camcorder"></i>
-					<span class="title">מצלמות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="camera_all.php">
-							<i class="icon-home"></i>
-							כל המצלמות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת מצלמה</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת מצלמה
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת מצלמה
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">דוחות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="reports_all.php">
-							<i class="icon-home"></i>
-							כל הדוחות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח ארועים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח טיפול בעומסים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח זמני עומסים</a>
-						</li>							
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bell"></i>
-					<span class="title">ארועים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="events_all.php">
-							<i class="icon-home"></i>
-							כל הארועים</a>
-						</li>
-						<li>
-							<a href="event_new.php">
-							<i class="icon-plus"></i>
-							יצירת אירוע חדש</a>
-						</li>
-						<li>
-							<a href="events_active.php">
-							<i class="icon-check"></i>
-							ארועים פעילים</a>
-						</li>					
-						<li>
-							<a href="events_pending_open.php">
-							<i class="fa fa-clock-o"></i>
-							ארועים ממתינים לאישור</a>
-						</li>						
-						<li>
-							<a href="events_history.php">
-							<i class="fa fa-history"></i>
-							ארועים היסטוריים</a>
-						</li>							
-					</ul>
-				</li>				
-				<li class="last ">
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="title">מפות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="maps_live.php">
-							מפת תנועה</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
+	<?php $Primary = 4; $Secondary = 0; include 'views\Menu.php'; ?>
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
@@ -287,7 +100,7 @@ $camera_id = 12 ;
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
-					<a href="#">ארועים</a>
+					<a href="camera_all.php">מצלמות</a>
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
@@ -304,12 +117,12 @@ $camera_id = 12 ;
 							<div class="col-xs-2" align="center">
 								<img src="../../assets/admin/layout4/img/WhiteCamera.png" class="img-responsive" alt="" />
 							</div>								
-							<div class="col-xs-4">
+							<div class="col-xs-5">
 								<br><br>
 								<div class="portlet box blue-hoki">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="icon-camcorder"></i>פרטי מצלמה
+											<i class="icon-pencil"></i>פרטי מצלמה
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
@@ -331,23 +144,34 @@ $camera_id = 12 ;
 													 <strong>שטח שיפוט: </strong> <?php echo mysql_result(mysql_query("SELECT camera_Admin from camera where id_camera=$camera_id",$connection),0); ?>
 												</li>
 												<li>
-													 <strong>נתיב: </strong> <?php echo mysql_result(mysql_query("SELECT camera_URL from camera where id_camera=$camera_id",$connection),0); ?>
-												</li>
+													 <strong>נתיב: </strong><a href="<?php echo mysql_result(mysql_query("SELECT camera_URL from camera where id_camera=$camera_id",$connection),0); ?>" target="_blank">לחץ כאן </a>
+												</li>											
+												<?php
+												if (mysql_result(mysql_query("SELECT id_CrossRoad from camera where id_camera=$camera_id",$connection),0) != 0)
+												{
+													echo '<li>';
+													echo '<strong>שייך לצומת: </strong>' ;
+													echo 	'<a href="crossroad_single.php?CR='.mysql_result(mysql_query("SELECT id_crossRoad from camera where id_camera=$camera_id",$connection),0).'">' ;
+													echo mysql_result(mysql_query("SELECT id_crossRoad from camera where id_camera=$camera_id",$connection),0);
+													echo '</a>' ;
+													echo '</li>';
+												}
+												?>												
 												<li>
-													 <strong>כתובת רשת: </strong> <?php echo mysql_result(mysql_query("SELECT camera_IP from camera where id_camera=$camera_id",$connection),0); ?>	 
-												</li>												
-												<li>
-													 <strong>צומת:  </strong> <?php echo mysql_result(mysql_query("SELECT id_CrossRoad from camera where id_camera=$camera_id",$connection),0); ?>
-												</li>
-												<li>
-													 <strong>מיקום:  </strong> <?php echo mysql_result(mysql_query("SELECT id_location from camera where id_camera=$camera_id",$connection),0); ?>
+													<strong>מיקום:  </strong>
+													<?php
+													$location_id = mysql_result(mysql_query("SELECT id_location from camera where id_camera=$camera_id",$connection),0);
+													$lat = mysql_result(mysql_query("SELECT lat from location where id_location=$location_id",$connection),0) ;
+													$lng = mysql_result(mysql_query("SELECT lng from location where id_location=$location_id",$connection),0) ;
+													echo '<a href="https://maps.google.com/?q='.$lat.','.$lng.'" dir="ltr" target="_blank">'.$lat.','.$lng.'</a>' ;
+													 ?>														
 												</li>												
 										</ul>
 									</div>
-								</div>	
-							</div>
-							<div class="col-xs-6">
-							<br><br>
+								</div>
+
+								
+
 								<!-- BEGIN GEOCODING PORTLET-->
 								<div class="portlet box blue-hoki">
 									<div class="portlet-title">
@@ -376,17 +200,20 @@ $camera_id = 12 ;
 											</div>
 										</form>
 										-->
-										<div id="map-canvas" class="gmaps" style="height: 300px;"></div> <!-- dolev -->
+										<div id="map-canvas" class="gmaps" style="height: 200px;"></div> <!-- dolev -->
 									</div>
 								</div>
-								<!-- END GEOCODING PORTLET-->		
-
+								<!-- END GEOCODING PORTLET-->										
+								
+							</div>
+							<div class="col-xs-5">
 							<br><br>
+
 								<!-- BEGIN GEOCODING PORTLET-->
 								<div class="portlet box blue-hoki">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="icon-pointer"></i>תצוגת מצלמה
+											<i class="icon-camcorder"></i>תצוגת מצלמה
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
@@ -399,10 +226,14 @@ $camera_id = 12 ;
 											</a>
 										</div>
 									</div>
-									<div class="portlet-body">
-תצוגה
+									<div class="portlet-body" style="height: 440px; ">
+											
+										<object type="text/html" data="<?php echo mysql_result(mysql_query("SELECT camera_URL from camera where id_camera=$camera_id",$connection),0); ?>" width="100%" height="100%" ></object>
+									
 									</div>
-								</div>								
+								</div>														
+								
+								
 							</div>								
 						</div>
 						<hr/>
@@ -416,14 +247,7 @@ $camera_id = 12 ;
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="page-footer-inner">
-		 2015 &copy; IOTraffic
-	</div>
-	<div class="scroll-to-top">
-		<i class="icon-arrow-up"></i>
-	</div>
-</div>
+<?php include 'views\footer.php';?>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
@@ -454,7 +278,7 @@ $camera_id = 12 ;
 
 <script> <!-- dolev -->
 function initialize() {
-  var myLatlng = new google.maps.LatLng(32.085300, 34.781768);
+  var myLatlng = new google.maps.LatLng(<?php echo $lat.','.$lng ?>);
   var mapOptions = {
     zoom: 18,
     center: myLatlng
@@ -465,16 +289,21 @@ function initialize() {
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
 
+<?php
+	$icon = 'Camera.png' ;	
+	$preview = 'מצלמה #'.$camera_id ;
+?>	  
+  
 //-------------------------------------------------------
 var marker=new google.maps.Marker({
-  position: new google.maps.LatLng(32.085300, 34.781768),
-  icon:'Camera.png'
+  position: new google.maps.LatLng(<?php echo $lat.','.$lng ?>),
+  icon:'<?php echo $icon ?>'
   });
 
 marker.setMap(map);
 
 var infowindow = new google.maps.InfoWindow({
-  content:"מצלמה 1"
+  content:"<?php echo $preview ?>"
   });
 
 google.maps.event.addListener(marker, 'click', function() {

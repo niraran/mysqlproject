@@ -69,7 +69,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<!-- /input-group -->
 				<div class="relogin">
-					<a href="login.html">
+					<a href="login.php">
 					אתה לא דולב שור? </a>
 				</div>
 			</form>

@@ -3,7 +3,7 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="#">
+			<a href="http://localhost:90/IOTraffic/templates/admin4/">
 			<img src="../../assets/admin/layout4/img/logo-light.png" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler">
@@ -70,7 +70,7 @@
 										$time = $datetime->format('H:i:s');
 										
 										echo '<li>' ;
-										echo 	'<a href="javascript:;">' ;
+										echo 	'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo 	'<span class="time">'.$time.'</span>' ;
 										echo	'<span class="details">' ;
 										echo	'<span class="label label-sm label-icon">' ;
@@ -119,7 +119,7 @@
 										$time = $datetime->format('H:i:s');
 										
 										echo '<li>' ;
-										echo 	'<a href="javascript:;">' ;
+										echo 	'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo 	'<span class="time">'.$time.'</span>' ;
 										echo	'<span class="details">' ;
 										echo	'<span class="label label-sm label-icon">' ;
@@ -168,7 +168,7 @@
 										$time = $datetime->format('H:i:s');
 										
 										echo '<li>' ;
-										echo 	'<a href="javascript:;">' ;
+										echo 	'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo 	'<span class="time">'.$time.'</span>' ;
 										echo	'<span class="details">' ;
 										echo	'<span class="label label-sm label-icon">' ;
@@ -217,7 +217,7 @@
 										$time = $datetime->format('H:i:s');
 										
 										echo '<li>' ;
-										echo 	'<a href="javascript:;">' ;
+										echo 	'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo 	'<span class="time">'.$time.'</span>' ;
 										echo	'<span class="details">' ;
 										echo	'<span class="label label-sm label-icon">' ;

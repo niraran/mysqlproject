@@ -3,7 +3,7 @@ $value = $_GET['query'];
 $formfield = $_GET['field'];
 
 //Check Valid or Invalid user name when user enters user name in username input field.
-if ($formfield == "username") {
+if ($formfield == "camera_id") {
     if (strlen($value) < 4) {
         echo "Must be 3+ letters";
     } else {

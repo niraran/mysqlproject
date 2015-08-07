@@ -73,188 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start">
-					<a href="index.php">
-					<i class="icon-home"></i>
-					<span class="title">מסך הבית</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bulb"></i>
-					<span class="title">רמזורים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הרמזורים
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת רמזור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת רמזור
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת רמזור
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-target"></i>
-					<span class="title">צמתים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הצמתים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת צומת</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת צומת
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת צומת
-							</a>
-						</li>					
-					</ul>
-				</li>
-				<li class="open active">
-					<a href="javascript:;">
-					<i class="icon-camcorder"></i>
-					<span class="title">מצלמות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li class="active">
-							<a href="#">
-							<i class="icon-home"></i>
-							כל המצלמות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת מצלמה</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת מצלמה
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת מצלמה
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">דוחות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הדוחות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח ארועים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח טיפול בעומסים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח זמני עומסים</a>
-						</li>							
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bell"></i>
-					<span class="title">ארועים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הארועים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-check"></i>
-							ארועים ממתינים לאישור</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-history"></i>
-							הסטוריית ארועים</a>
-						</li>							
-					</ul>
-				</li>				
-				<li class="last ">
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="title">מפות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="maps_google.html">
-							מפת תנועה</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
+	<?php $Primary = 4; $Secondary = 4.1; include 'views\Menu.php'; ?>
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
@@ -276,7 +95,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
-					<a href="#">מצלמות</a>
+					<a href="camera_all.php">מצלמות</a>
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
@@ -339,37 +158,58 @@ License: You must have a valid license purchased only from themeforest(the above
 									$line=1;
 									while ($i < $num4)
 									{
+										$location_id = mysql_result($result4,$i,"id_location") ;
+										$lat = mysql_result(mysql_query("SELECT lat from location where id_location=$location_id",$connection),0) ;
+										$lng = mysql_result(mysql_query("SELECT lng from location where id_location=$location_id",$connection),0) ;
+										
 										echo '<tr>' ;
 										echo	'<td>' ;
-										echo		$line ;
+										echo 		'<a href="camera_single.php?CAM='.mysql_result($result4,$i,"id_camera").'">' ;
+										echo			$line ;
+										echo 		'</a>' ;
 										++$line ;
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"id_camera") ;
+										echo 		'<a href="camera_single.php?CAM='.mysql_result($result4,$i,"id_camera").'">' ;
+										echo			mysql_result($result4,$i,"id_camera") ;
+										echo 		'</a>' ;
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"camera_LocationName") ;
+										echo 		'<a href="camera_single.php?CAM='.mysql_result($result4,$i,"id_camera").'">' ;
+										echo			mysql_result($result4,$i,"camera_LocationName") ;
+										echo 		'</a>' ;
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"camera_Direction") ;
+										echo		mysql_result($result4,$i,"camera_Direction") ;
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"camera_Admin") ;
+										echo		mysql_result($result4,$i,"camera_Admin") ;
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"camera_URL") ;
+										echo 		'<a href="camera_single.php?CAM='.mysql_result($result4,$i,"id_camera").'">' ;
+										echo			mysql_result($result4,$i,"camera_URL") ;
+										echo 		'</a>' ;
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"camera_IP") ;
+										echo		mysql_result($result4,$i,"camera_IP") ;
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"inCrossRoad") ;
+										echo		mysql_result($result4,$i,"inCrossRoad") ;
 										echo	'</td>'		 ;								
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"id_CrossRoad") ;
+													if (mysql_result($result4,$i,"id_crossRoad") == 0)
+													{
+														echo '';
+													}
+													else
+													{
+													echo 	'<a href="crossroad_single.php?CR='.mysql_result($result4,$i,"id_crossRoad").'">' ;
+													echo	mysql_result($result4,$i,"id_crossRoad") ;
+													echo 	'</a>' ;
+													}
 										echo	'</td>' ;
 										echo	'<td>' ;
-										echo	mysql_result($result4,$i,"id_location") ;
+										echo 		'<a href="https://maps.google.com/?q='.$lat.','.$lng.'" dir="ltr" target="_blank">'.$lat.','.$lng.'</a>' ;	
 										echo	'</td>' ;
 										echo '</tr>' ;
 										$i++;	
@@ -389,14 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="page-footer-inner">
-		 2015 &copy; IOTraffic
-	</div>
-	<div class="scroll-to-top">
-		<i class="icon-arrow-up"></i>
-	</div>
-</div>
+<?php include 'views\footer.php';?>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->

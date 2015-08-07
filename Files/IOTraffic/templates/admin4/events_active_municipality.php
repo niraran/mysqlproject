@@ -72,203 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start">
-					<a href="index.php">
-					<i class="icon-home"></i>
-					<span class="title">מסך הבית</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bulb"></i>
-					<span class="title">רמזורים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הרמזורים
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת רמזור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת רמזור
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת רמזור
-							</a>
-						</li>
-					</ul>
-				</li>
-								<li>
-					<a href="javascript:;">
-					<i class="icon-target"></i>
-					<span class="title">צמתים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הצמתים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת צומת</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת צומת
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת צומת
-							</a>
-						</li>					
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-camcorder"></i>
-					<span class="title">מצלמות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל המצלמות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת מצלמה</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת מצלמה
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת מצלמה
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">דוחות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הדוחות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח ארועים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח טיפול בעומסים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח זמני עומסים</a>
-						</li>							
-					</ul>
-				</li>
-				<li class="open active">
-					<a href="javascript:;">
-					<i class="icon-bell"></i>
-					<span class="title">ארועים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הארועים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							יצירת אירוע חדש</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-check"></i>
-							ארועים פעילים</a>
-						</li>					
-						<li>
-							<a href="#">
-							<i class="fa fa-clock-o"></i>
-							ארועים ממתינים לאישור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-unlock"></i>
-							ארועים ממתינים לסגירה</a>
-						</li>							
-						<li>
-							<a href="#">
-							<i class="fa fa-history"></i>
-							ארועים היסטוריים</a>
-						</li>							
-					</ul>
-				</li>				
-				<li class="last ">
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="title">מפות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="maps_google.html">
-							מפת תנועה</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
+	<?php $Primary = 6; $Secondary = 0; include 'views\Menu.php'; ?>
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
@@ -341,16 +145,22 @@ License: You must have a valid license purchased only from themeforest(the above
 									 #
 								</th>
 								<th>
+									 מספר
+								</th>								
+								<th>
 									 שם
 								</th>
 								<th>
 									 תיאור
 								</th>
 								<th>
-									 סוג
-								</th>
+									 קטגוריה
+								</th>								
 								<th>
 									 יוזם
+								</th>								
+								<th>
+									 סוג
 								</th>
 								<th>
 									 שעת פתיחה
@@ -387,22 +197,60 @@ License: You must have a valid license purchased only from themeforest(the above
 									//{	
 										if (mysql_result($result,$i,"eventCategory") == 'MUNICIPALITY' AND mysql_result($result,$i,"eventStatus") == 'open')
 										{
+
+										$location_id = mysql_result($result,$i,"id_location") ;
+										$lat = mysql_result(mysql_query("SELECT lat from location where id_location=$location_id",$connection),0) ;
+										$lng = mysql_result(mysql_query("SELECT lng from location where id_location=$location_id",$connection),0) ;	
+										
 										echo	'<tr>' ;
 										echo		'<td>' ;
+										echo 		'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo	$line ;
+										echo 		'</a>' ;
 										++$line ;
 										echo		'</td>' ;
 										echo		'<td>' ;
+										echo 		'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
+										echo			'#'.mysql_result($result,$i,"id_event") ;
+										echo 		'</a>' ;
+										echo		'</td>' ;										
+										echo		'<td>' ;
+										echo 		'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo		mysql_result($result,$i,"eventName") ;
+										echo 		'</a>' ;
 										echo		'</td>' ;
 										echo		'<td>' ;
+										echo 		'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo			mysql_result($result,$i,"eventDescription") ;
+										echo 		'</a>' ;
 										echo		'</td>' ;
 										echo		'<td>' ;
-										echo			mysql_result($result,$i,"eventType") ;
-										echo		'</td>' ;
+											if (mysql_result($result,$i,"eventCategory") == 'POLICE')
+											{
+											echo			'משטרה' ;
+											}
+											elseif (mysql_result($result,$i,"eventCategory") == 'MDA')
+											{
+											echo			'מד"א' ;	
+											}
+											elseif (mysql_result($result,$i,"eventCategory") == 'FIRE')
+											{
+											echo			'כיבוי אש' ;	
+											}
+											elseif (mysql_result($result,$i,"eventCategory") == 'MUNICIPALITY')
+											{
+											echo			'עירייה' ;	
+											}
+											elseif (mysql_result($result,$i,"eventCategory") == 'OTHER')
+											{
+											echo			'אחר' ;	
+											}
+										echo		'</td>' ;													
 										echo		'<td>' ;
 										echo			mysql_result($result,$i,"eventOpenBy") ;
+										echo		'</td>' ;										
+										echo		'<td>' ;
+										echo			mysql_result($result,$i,"eventType") ;
 										echo		'</td>' ;
 										echo		'<td>' ;
 										echo			 $event_time ;
@@ -411,11 +259,13 @@ License: You must have a valid license purchased only from themeforest(the above
 										echo			$event_date ; 
 										echo		'</td>'	;								
 										echo		'<td>' ;
-										echo			 '<a href="#">32.023432,34.750947 </a>' ;
+										echo 			'<a href="https://maps.google.com/?q='.$lat.','.$lng.'" dir="ltr" target="_blank">'.$lat.','.$lng.'</a>' ;	
 										echo		'</td>' ;
 										echo		'<td align="center">' ;
+										echo 		'<a href="event_single.php?EVT='.mysql_result($result,$i,"id_event").'">' ;
 										echo			'<span class="label label-sm label-success">' ;
 										echo			'פעיל </span>' ;
+										echo 		'</a>' ;
 										echo		'</td>' ;
 										echo	'</tr>' ;		
 										}
@@ -436,14 +286,7 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="page-footer-inner">
-		 2015 &copy; IOTraffic
-	</div>
-	<div class="scroll-to-top">
-		<i class="icon-arrow-up"></i>
-	</div>
-</div>
+<?php include 'views\footer.php';?>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->

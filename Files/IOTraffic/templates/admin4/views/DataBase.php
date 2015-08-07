@@ -46,5 +46,19 @@ $query4="SELECT * FROM camera";
 $result4=mysql_query($query4);
 $num4=mysql_numrows($result4);
 
+//get enum values
+function get_enum_values( $table , $field )
+{
+	$query = " SHOW COLUMNS FROM `$table` LIKE '$field' ";
+	$result = mysql_query( $query ) or die( 'error getting enum field ' . mysql_error() );
+	$row = mysql_fetch_array( $result , MYSQL_NUM );
+	#extract the values
+	#the values are enclosed in single quotes
+	#and separated by commas
+	$regex = "/'(.*?)'/";
+	preg_match_all( $regex , $row[1], $enum_array );
+	$enum_values = $enum_array[1];
+	return $enum_values;
+}
 
 ?>

@@ -68,204 +68,17 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- Traffic Light ID -->
 <?php
-$trafficLight_id = 1 ;
+$param1 = $_GET['TL']; //GET Traffic Light number
+//echo "<script type='text/javascript'>alert('$param1');</script>";
+
+$trafficLight_id = $param1 ;
+//$trafficLight_id = 1 ;
 ?>
 
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start">
-					<a href="index.php">
-					<i class="icon-home"></i>
-					<span class="title">מסך הבית</span>
-					</a>
-				</li>
-				<li class="active">
-					<a href="javascript:;">
-					<i class="icon-bulb"></i>
-					<span class="title">רמזורים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="traffic_light_all.php">
-							<i class="icon-home"></i>
-							כל הרמזורים
-							</a>
-						</li>
-						<li>
-							<a href="traffic_light_add.php">
-							<i class="icon-plus"></i>
-							הוספת רמזור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת רמזור
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת רמזור
-							</a>
-						</li>
-					</ul>
-				</li>
-								<li>
-					<a href="javascript:;">
-					<i class="icon-target"></i>
-					<span class="title">צמתים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="crossroad_all.php">
-							<i class="icon-home"></i>
-							כל הצמתים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת צומת</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת צומת
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת צומת
-							</a>
-						</li>					
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-camcorder"></i>
-					<span class="title">מצלמות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="camera_all.php">
-							<i class="icon-home"></i>
-							כל המצלמות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת מצלמה</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת מצלמה
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת מצלמה
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">דוחות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="reports_all.php">
-							<i class="icon-home"></i>
-							כל הדוחות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח ארועים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח טיפול בעומסים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח זמני עומסים</a>
-						</li>							
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bell"></i>
-					<span class="title">ארועים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="events_all.php">
-							<i class="icon-home"></i>
-							כל הארועים</a>
-						</li>
-						<li>
-							<a href="event_new.php">
-							<i class="icon-plus"></i>
-							יצירת אירוע חדש</a>
-						</li>
-						<li>
-							<a href="events_active.php">
-							<i class="icon-check"></i>
-							ארועים פעילים</a>
-						</li>					
-						<li>
-							<a href="events_pending_open.php">
-							<i class="fa fa-clock-o"></i>
-							ארועים ממתינים לאישור</a>
-						</li>						
-						<li>
-							<a href="events_history.php">
-							<i class="fa fa-history"></i>
-							ארועים היסטוריים</a>
-						</li>							
-					</ul>
-				</li>				
-				<li class="last ">
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="title">מפות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="maps_live.php">
-							מפת תנועה</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
+	<?php $Primary = 2; $Secondary = 0; include 'views\Menu.php'; ?>
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
@@ -287,7 +100,7 @@ $trafficLight_id = 1 ;
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
-					<a href="#">ארועים</a>
+					<a href="traffic_light_all.php">רמזורים</a>
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
@@ -331,13 +144,16 @@ $trafficLight_id = 1 ;
 <?php
 									if (mysql_result(mysql_query("SELECT trafficLight_Status from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) == 'GREEN' )
 									{
-										echo '<a class="btn btn-lg red hidden-print margin-bottom-5" onclick="javascript;">' ;
+										//echo '<a class="btn btn-lg red hidden-print margin-bottom-5" onclick="javascript;">' ;
+										//echo '<a href="Set_TL_RED.php?param1='.$trafficLight_id.'" class="btn btn-lg red hidden-print margin-bottom-5" >' ;
+										echo '<a href="query/Set_TL_STATUS.php?param1='.$trafficLight_id.'&amp;param2=RED" class="btn btn-lg red hidden-print margin-bottom-5" >' ;
 										echo 'החלף רמזור לאדום' ;
 										echo '</a>' ;
 									}
 									elseif (mysql_result(mysql_query("SELECT trafficLight_Status from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) == 'RED' )
 									{
-										echo '<a class="btn btn-lg green hidden-print margin-bottom-5" onclick="javascript;">' ;
+										//echo '<a class="btn btn-lg green hidden-print margin-bottom-5" onclick="javascript;">' ;
+										echo '<a href="query/SET_TL_STATUS.php?param1='.$trafficLight_id.'&amp;param2=GREEN" class="btn btn-lg green hidden-print margin-bottom-5" >' ;
 										echo 'החלף רמזור לירוק' ;
 										echo '</a>' ;
 									}									
@@ -374,11 +190,25 @@ $trafficLight_id = 1 ;
 												<li>
 													 <strong>רמזור להולכי רגל:  </strong> <?php echo mysql_result(mysql_query("SELECT trafficLight_Pedestrians from traffic_light where id_trafficLight=$trafficLight_id",$connection),0); ?>
 												</li>												
+												<?php
+												if (mysql_result(mysql_query("SELECT id_crossRoad from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) != 0)
+												{
+													echo '<li>';
+													echo '<strong>שייך לצומת: </strong>' ;
+													echo 	'<a href="crossroad_single.php?CR='.mysql_result(mysql_query("SELECT id_crossRoad from traffic_light where id_trafficLight=$trafficLight_id",$connection),0).'">' ;
+													echo mysql_result(mysql_query("SELECT id_crossRoad from traffic_light where id_trafficLight=$trafficLight_id",$connection),0);
+													echo '</a>' ;
+													echo '</li>';
+												}
+												?>
 												<li>
-													 <strong>צומת:  </strong> <?php echo mysql_result(mysql_query("SELECT id_crossRoad from traffic_light where id_trafficLight=$trafficLight_id",$connection),0); ?>
-												</li>
-												<li>
-													 <strong>מיקום:  </strong> <?php echo mysql_result(mysql_query("SELECT id_location from traffic_light where id_trafficLight=$trafficLight_id",$connection),0); ?>
+													<strong>מיקום:  </strong>
+													<?php
+													$location_id = mysql_result(mysql_query("SELECT id_location from traffic_light where id_trafficLight=$trafficLight_id",$connection),0);
+													$lat = mysql_result(mysql_query("SELECT lat from location where id_location=$location_id",$connection),0) ;
+													$lng = mysql_result(mysql_query("SELECT lng from location where id_location=$location_id",$connection),0) ;
+													echo '<a href="https://maps.google.com/?q='.$lat.','.$lng.'" dir="ltr" target="_blank">'.$lat.','.$lng.'</a>' ;
+													 ?>
 												</li>												
 										</ul>
 									</div>
@@ -495,14 +325,7 @@ $trafficLight_id = 1 ;
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="page-footer-inner">
-		 2015 &copy; IOTraffic
-	</div>
-	<div class="scroll-to-top">
-		<i class="icon-arrow-up"></i>
-	</div>
-</div>
+<?php include 'views\footer.php';?>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
@@ -533,7 +356,7 @@ $trafficLight_id = 1 ;
 
 <script> <!-- dolev -->
 function initialize() {
-  var myLatlng = new google.maps.LatLng(32.085300, 34.781768);
+  var myLatlng = new google.maps.LatLng(<?php echo $lat.','.$lng ?>);
   var mapOptions = {
     zoom: 18,
     center: myLatlng
@@ -543,17 +366,43 @@ function initialize() {
 
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
+  
+  
+<?php
+	$preview = 'רמזור #'.$trafficLight_id ;
+	if (mysql_result(mysql_query("SELECT trafficLight_Status from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) == 'RED' )
+	{
+		$icon = 'Traffic_L_iconRED.png' ;
+	}
+	elseif (mysql_result(mysql_query("SELECT trafficLight_Status from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) == 'RED-YELLOW' )
+	{
+		$icon = 'Traffic_L_iconRED-YELLOW.png' ;
+	}
+	elseif (mysql_result(mysql_query("SELECT trafficLight_Status from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) == 'YELLOW' )
+	{
+		$icon = 'Traffic_L_iconYELLOW.png' ;	
+	}
+	elseif (mysql_result(mysql_query("SELECT trafficLight_Status from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) == 'FLASHING-YELLOW' )
+	{
+		$icon = 'Traffic_L_iconYELLOW.png' ;
+	}
+	elseif (mysql_result(mysql_query("SELECT trafficLight_Status from traffic_light where id_trafficLight=$trafficLight_id",$connection),0) == 'GREEN' )
+	{
+		$icon = 'Traffic_L_iconGREEN.png' ;
+	}	
 
+?>	  
+  
 //-------------------------------------------------------
 var marker=new google.maps.Marker({
-  position: new google.maps.LatLng(32.085300, 34.781768),
-  icon:'Traffic_L_iconRED.png'
+  position: new google.maps.LatLng(<?php echo $lat.','.$lng ?>),
+  icon:'<?php echo $icon ?>'
   });
 
 marker.setMap(map);
 
 var infowindow = new google.maps.InfoWindow({
-  content:"רמזור 1"
+  content:"<?php echo $preview ?>"
   });
 
 google.maps.event.addListener(marker, 'click', function() {

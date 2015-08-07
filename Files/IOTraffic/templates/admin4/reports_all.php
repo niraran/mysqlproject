@@ -52,522 +52,24 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
 <body class="page-header-fixed page-sidebar-closed-hide-logo ">
+<!-- BEGIN DB -->
+<?php include 'views\DataBase.php';?>
+<!-- END DB -->
+
 <!-- BEGIN HEADER -->
-<div class="page-header navbar navbar-fixed-top">
-	<!-- BEGIN HEADER INNER -->
-	<div class="page-header-inner">
-		<!-- BEGIN LOGO -->
-		<div class="page-logo">
-			<a href="index.php">
-			<img src="../../assets/admin/layout4/img/logo-light.png" alt="logo" class="logo-default"/>
-			</a>
-			<div class="menu-toggler sidebar-toggler">
-				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
-			</div>
-		</div>
-		<!-- END LOGO -->
-		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
-		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-		</a>
-		<!-- END RESPONSIVE MENU TOGGLER -->
-		<!-- BEGIN PAGE ACTIONS -->
-		<!-- DOC: Remove "hide" class to enable the page header actions -->
-		<div class="page-actions">
-			<div class="btn-group">
-				<button type="button" class="btn red-haze btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-				<span class="hidden-sm hidden-xs">חדש&nbsp;</span><i class="fa fa-angle-down"></i>
-				</button>
-				<ul class="dropdown-menu" role="menu">
-					<li>
-						<a href="#">
-						<i class="icon-docs"></i> יצירת אירוע </a>
-					</li>
-					<!--
-					<li class="divider">
-					</li>
-					<li>
-						<a href="#">
-						<i class="icon-flag"></i> תגובות <span class="badge badge-success">4</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-						<i class="icon-users"></i> Feedbacks <span class="badge badge-danger">2</span>
-						</a>
-					</li>
-					-->
-				</ul>
-			</div>
-		</div>
-		<!-- END PAGE ACTIONS -->
-		<!-- BEGIN PAGE TOP -->
-		<div class="page-top">
-			<!-- BEGIN TOP NAVIGATION MENU -->
-			<div class="top-menu">
-				<ul class="nav navbar-nav pull-right">
-					<li class="separator hide">
-					</li>
-					<!-- BEGIN NOTIFICATION-Police DROPDOWN -->
-					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-					<li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<i class="fa fa-empire"></i>
-						<span class="badge badge-success">
-						7 </span>
-						</a>
-						<ul class="dropdown-menu">
-							<li class="external">
-								<h3><span class="bold">7 ארועי משטרה </span></h3>
-								<a href="extra_profile.html">צפה בהכל</a>
-							</li>
-							<li>
-								<ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-									<li>
-										<a href="javascript:;">
-										<span class="time">הרגע</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-success">
-										<i class="fa fa-minus-circle"></i>
-										</span>
-										תאונת שרשרת בכביש 70 </span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">15 דקות</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-danger">
-										<i class="fa fa-bolt"></i>
-										</span>
-										מסיבת רחוב - דיזינגוף ת"א"  </span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">שעתיים</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-warning">
-										<i class="fa fa-bell-o"></i>
-										</span>
-										הפגנה בירושלים </span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">3 שעות</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-info">
-										<i class="fa fa-bullhorn"></i>
-										</span>
-										תאונה בכביש 90 </span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">2 days</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-danger">
-										<i class="fa fa-bolt"></i>
-										</span>
-										Database overloaded 68%. </span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">3 days</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-danger">
-										<i class="fa fa-bolt"></i>
-										</span>
-										A user IP blocked. </span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">4 days</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-warning">
-										<i class="fa fa-bell-o"></i>
-										</span>
-										Storage Server #4 not responding dfdfdfd. </span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- END NOTIFICATION-Police DROPDOWN -->
-					<li class="separator hide">
-					</li>
-					<!-- BEGIN NOTIFICATION-MDA DROPDOWN -->
-					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-					<li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<i class="fa fa-ambulance"></i>
-						<span class="badge badge-success">
-						2 </span>
-						</a>
-						<ul class="dropdown-menu">
-							<li class="external">
-								<h3><span class="bold">2 ארועי מד"א</span></h3>
-								<a href="extra_profile.html">צפה בהכל</a>
-							</li>
-							<li>
-								<ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-									<li>
-										<a href="javascript:;">
-										<span class="time">27 דקות</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-success">
-										<i class="fa fa-plus"></i>
-										</span>
-										תאונה בכביש 70 </span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">31 דקות</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-danger">
-										<i class="fa fa-bolt"></i>
-										</span>
-										תאונה בכביש 90 </span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- END NOTIFICATION-MDA DROPDOWN -->
-					<li class="separator hide">
-					</li>
-					<!-- BEGIN NOTIFICATION-Fire DROPDOWN -->
-					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-					<li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<i class="fa fa-fire-extinguisher"></i>
-						<span class="badge badge-success">
-						2 </span>
-						</a>
-						<ul class="dropdown-menu">
-							<li class="external">
-								<h3><span class="bold">2 ארועי כיבוי אש</span></h3>
-								<a href="extra_profile.html">צפה בהכל</a>
-							</li>
-							<li>
-								<ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-									<li>
-										<a href="javascript:;">
-										<span class="time">10 דקות</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-success">
-										<i class="fa fa-plus"></i>
-										</span>
-										שריפה ברחוב המלך דוד</span>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<span class="time">56 דקות</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-danger">
-										<i class="fa fa-bolt"></i>
-										</span>
-										כיבוי שריפה ביער אדם </span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- END NOTIFICATION-Fire DROPDOWN -->
-					<li class="separator hide">
-					</li>
-					<!-- BEGIN NOTIFICATION-Town DROPDOWN -->
-					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-					<li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<i class="fa fa-building"></i>
-						<span class="badge badge-success">
-						1 </span>
-						</a>
-						<ul class="dropdown-menu">
-							<li class="external">
-								<h3><span class="bold">1 ארועי עירייה</span></h3>
-								<a href="extra_profile.html">צפה בהכל</a>
-							</li>
-							<li>
-								<ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-									<li>
-										<a href="javascript:;">
-										<span class="time">12 דקות</span>
-										<span class="details">
-										<span class="label label-sm label-icon label-success">
-										<i class="fa fa-plus"></i>
-										</span>
-										חסימת רחוב קלויזנר </span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- END NOTIFICATION-Town DROPDOWN -->
-					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-					<li class="dropdown dropdown-user dropdown-dark">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<span class="username username-hide-on-mobile">
-						דולב </span>
-						<!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
-						<img alt="" class="img-circle" src="../../assets/admin/layout4/img/avatar9.jpg"/>
-						</a>
-												<ul class="dropdown-menu dropdown-menu-default">
-							<li>
-								<a href="extra_profile.html">
-								<i class="icon-user"></i> הפרופיל שלי </a>
-							</li>
-							<li>
-								<a href="page_todo.html">
-								<i class="icon-rocket"></i> המשימות שלי <span class="badge badge-success">
-								7 </span>
-								</a>
-							</li>
-							<li class="divider">
-							</li>
-							<li>
-								<a href="extra_lock.html">
-								<i class="icon-lock"></i> נעילת מסך </a>
-							</li>
-							<li>
-								<a href="login.html">
-								<i class="icon-key"></i> יציאה </a>
-							</li>
-						</ul>
-					</li>
-					<!-- END USER LOGIN DROPDOWN -->
-				</ul>
-			</div>
-			<!-- END TOP NAVIGATION MENU -->
-		</div>
-		<!-- END PAGE TOP -->
-	</div>
-	<!-- END HEADER INNER -->
-</div>
+<?php include 'views\header.php';?>
 <!-- END HEADER -->
-<div class="clearfix">
-</div>
+
+<div class="clearfix"></div>
+
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start">
-					<a href="index.php">
-					<i class="icon-home"></i>
-					<span class="title">מסך הבית</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bulb"></i>
-					<span class="title">רמזורים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הרמזורים
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת רמזור</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת רמזור
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת רמזור
-							</a>
-						</li>
-					</ul>
-				</li>
-								<li>
-					<a href="javascript:;">
-					<i class="icon-target"></i>
-					<span class="title">צמתים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הצמתים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת צומת</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת צומת
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת צומת
-							</a>
-						</li>					
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-camcorder"></i>
-					<span class="title">מצלמות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל המצלמות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-plus"></i>
-							הוספת מצלמה</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-pencil"></i>
-							עריכת מצלמה
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-trash-o"></i>
-							מחיקת מצלמה
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="open active">
-					<a href="javascript:;">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">דוחות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li class="active">
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הדוחות</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח ארועים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח טיפול בעומסים</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-bar-chart-o"></i>
-							דו"ח זמני עומסים</a>
-						</li>							
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-bell"></i>
-					<span class="title">ארועים</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							<i class="icon-home"></i>
-							כל הארועים</a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-check"></i>
-							ארועים ממתינים לאישור</a>
-						</li>	
-						<li>
-							<a href="#">
-							<i class="fa fa-history"></i>
-							הסטוריית ארועים</a>
-						</li>							
-					</ul>
-				</li>				
-				<li class="last">
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="title">מפות</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="maps_google.html">
-							מפת תנועה</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
+	<?php $Primary = 5; $Secondary = 5.1; include 'views\Menu.php'; ?>
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
 		<div class="page-content">
-			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Modal title</h4>
-						</div>
-						<div class="modal-body">
-							 Widget settings form goes here
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn blue">Save changes</button>
-							<button type="button" class="btn default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-					<!-- /.modal-content -->
-				</div>
-				<!-- /.modal-dialog -->
-			</div>
-			<!-- /.modal -->
-			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 			<!-- BEGIN PAGE HEADER-->
 			<!-- BEGIN PAGE HEAD -->
 			<div class="page-head">
@@ -596,102 +98,132 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- END PAGE HEADER-->
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="tiles">
-				<div class="tile bg-green-meadow">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח כלל ארועים
+				<a href="report_events_all.php">
+					<div class="tile bg-green-meadow">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
 						</div>
-						<div class="number">
-						</div>
-					</div>
-				</div>				
-				<div class="tile double bg-green">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח ארועי משטרה
-						</div>
-						<div class="number">
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח כלל הארועים
+							</div>
+							<div class="number">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="tile double bg-purple-intense">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח ארועי עירייה
+				</a>
+				<a href="report_events_police.php">
+					<div class="tile double bg-green">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
 						</div>
-						<div class="number">
-						</div>
-					</div>
-				</div>
-				<div class="tile double bg-red-intense">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח ארועי מגן דוד אדום
-						</div>
-						<div class="number">
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח ארועי משטרה
+							</div>
+							<div class="number">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="tile bg-green">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח טיפול בעומסים
+				</a>
+				<a href="report_events_mda.php">
+					<div class="tile double bg-red-intense">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
 						</div>
-						<div class="number">
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח ארועי מגן דוד אדום
+							</div>
+							<div class="number">
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="tile double bg-green">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח זמני עומסים
+					</div>	
+				</a>	
+				<a href="report_events_fire.php">				
+					<div class="tile double bg-green">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
 						</div>
-						<div class="number">
-						</div>
-					</div>
-				</div>
-				<div class="tile bg-green">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח בלה בלה
-						</div>
-						<div class="number">
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח ארועי כיבוי אש
+							</div>
+							<div class="number">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="tile double bg-green">
-					<div class="tile-body">
-						<i class="fa fa-bar-chart-o"></i>
-					</div>
-					<div class="tile-object">
-						<div class="name">
-							 דו"ח בלה בלה 2
+				</a>
+				<a href="report_events_municipality.php">
+					<div class="tile double bg-purple-intense">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
 						</div>
-						<div class="number">
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח ארועי עירייה
+							</div>
+							<div class="number">
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
+				<a href="report_events_traffic.php">				
+					<div class="tile bg-green">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
+						</div>
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח טיפול בעומסים
+							</div>
+							<div class="number">
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="report_events_accident.php">
+					<div class="tile double bg-green">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
+						</div>
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח תאונות
+							</div>
+							<div class="number">
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="report_events_sport.php">
+					<div class="tile bg-green">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
+						</div>
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח ארועי ספורט
+							</div>
+							<div class="number">
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="report_events_street.php">
+					<div class="tile double bg-green">
+						<div class="tile-body">
+							<i class="fa fa-bar-chart-o"></i>
+						</div>
+						<div class="tile-object">
+							<div class="name">
+								 דו"ח חסימות רחוב
+							</div>
+							<div class="number">
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>
 			<!-- END PAGE CONTENT-->
 		</div>
@@ -700,14 +232,7 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
-<div class="page-footer">
-	<div class="page-footer-inner">
-		 2015 &copy; IOTraffic
-	</div>
-	<div class="scroll-to-top">
-		<i class="icon-arrow-up"></i>
-	</div>
-</div>
+<?php include 'views\footer.php';?>
 <!-- END FOOTER -->
 </div>
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
