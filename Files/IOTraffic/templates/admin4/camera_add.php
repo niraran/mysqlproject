@@ -147,7 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" name="cam_id" id="cam_id"/>
+												<input type="text" class="form-control" name="cam_id" />
 											</div>
 										</div>
 									</div>
@@ -158,7 +158,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" name="cam_name"/>
+												<input type="text" class="form-control" name="cam_name"  />
 											</div>
 										</div>
 									</div>
@@ -169,7 +169,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" name="cam_url"/>
+												<input type="text" class="form-control" name="cam_url" />
 											</div>
 										</div>
 									</div>
@@ -323,14 +323,14 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="../../assets/admin/pages/scripts/form-validation.js"></script>
 <!-- END PAGE LEVEL STYLES -->
 <script>
-var formValidation = $(form).data('formValidation');
+//$form_sample_2.validate();
 jQuery(document).ready(function() {
-	validate();
-   // initiate layout and plugins
+	   // initiate layout and plugins
    Metronic.init(); // init metronic core components
 Layout.init(); // init current layout
 //Demo.init(); // init demo features
-//   $FormValidation.validate();
+	 //$("form_sample_2").validate();
+	 FormValidation.init();
 });
 </script>
 <!-- END JAVASCRIPTS -->

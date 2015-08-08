@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 
+<!--
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
 Version: 3.6.3
 Author: KeenThemes
@@ -107,7 +107,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- END PAGE BREADCRUMB -->
 			<!-- END PAGE HEADER-->
 			<!-- BEGIN PAGE CONTENT-->
-			
+
 			<div class="row">
 				<div class="col-md-12">
 					<!-- BEGIN VALIDATION STATES-->
@@ -129,7 +129,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="query/add_EVT.php" id="form_sample_2" class="form-horizontal" method="post">
+							<form action="query/add_EVT.php" id="form_sample_3" class="form-horizontal" method="post">
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>
@@ -148,7 +148,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" name="name"/>
+												<input type="text" class="form-control" name="event_name"/>
 											</div>
 										</div>
 									</div>
@@ -159,7 +159,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" name="description"/>
+												<input type="text" class="form-control" name="event_description"/>
 											</div>
 										</div>
 									</div>
@@ -170,7 +170,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" name="source"/>
+												<input type="text" class="form-control" name="event_source"/>
 											</div>
 										</div>
 									</div>
@@ -187,7 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<option>עירייה</option>
 												<option>אחר</option>
 											</select>
-										</div>	
+										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-md-3">סוג אירוע<span class="required">
@@ -206,8 +206,8 @@ License: You must have a valid license purchased only from themeforest(the above
 													}
 												?>
 											</select>
-										</div>	
-									</div>	
+										</div>
+									</div>
 									<div class="form-group">
 										<label class="control-label col-md-3">מיקום (קו אורך) <span class="required">
 										* </span>
@@ -218,7 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<input type="text" class="form-control" name="location_lng"/>
 											</div>
 										</div>
-									</div>									
+									</div>
 									<div class="form-group">
 										<label class="control-label col-md-3">מיקום (קו רוחב) <span class="required">
 										* </span>
@@ -229,7 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<input type="text" class="form-control" name="location_lat"/>
 											</div>
 										</div>
-									</div>									
+									</div>
 								</div>
 								<div class="form-actions">
 									<div class="row">
@@ -240,12 +240,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</form>
-							<!-- END FORM-->				
+							<!-- END FORM-->
 						</div>
 					</div>
 					<!-- END VALIDATION STATES-->
 				</div>
-			</div>		
+			</div>
 			<!-- END PAGE CONTENT-->
 		</div>
 	</div>
@@ -259,7 +259,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>
 <script src="../../assets/global/plugins/respond.min.js"></script>
-<script src="../../assets/global/plugins/excanvas.min.js"></script> 
+<script src="../../assets/global/plugins/excanvas.min.js"></script>
 <![endif]-->
 <script src="../../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="../../assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
@@ -291,11 +291,11 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="../../assets/admin/pages/scripts/form-validation.js"></script>
 <!-- END PAGE LEVEL STYLES -->
 <script>
-jQuery(document).ready(function() {   
+jQuery(document).ready(function() {
    // initiate layout and plugins
    Metronic.init(); // init metronic core components
 Layout.init(); // init current layout
-Demo.init(); // init demo features
+//Demo.init(); // init demo features
    FormValidation.init();
 });
 </script>
