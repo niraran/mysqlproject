@@ -2,7 +2,7 @@ var FormValidation = function () {
 
     // basic validation
     var handleValidation1 = function() {
-        // for more info visit the official plugin documentation: 
+        // for more info visit the official plugin documentation:
             // http://docs.jquery.com/Plugins/Validation
 
             var form1 = $('#form_sample_1');
@@ -21,7 +21,7 @@ var FormValidation = function () {
                     }
                 },
                 rules: {
-                    name: {
+                    cam_id: {
                         minlength: 2,
                         required: true
                     },
@@ -58,7 +58,7 @@ var FormValidation = function () {
                     }
                 },
 
-                invalidHandler: function (event, validator) { //display error alert on form submit              
+                invalidHandler: function (event, validator) { //display error alert on form submit
                     success1.hide();
                     error1.show();
                     Metronic.scrollTo(error1, -200);
@@ -90,7 +90,7 @@ var FormValidation = function () {
 
     // validation using icons
     var handleValidation2 = function() {
-        // for more info visit the official plugin documentation: 
+        // for more info visit the official plugin documentation:
             // http://docs.jquery.com/Plugins/Validation
 
             var form2 = $('#form_sample_2');
@@ -102,9 +102,10 @@ var FormValidation = function () {
                 errorClass: 'help-block help-block-error', // default input error message class
                 focusInvalid: false, // do not focus the last invalid input
                 ignore: "",  // validate all fields including form hidden input
+                onfocusout: true,
                 rules: {
-                    name: {
-                        minlength: 2,
+                    cam_id: {
+                        minlength: 4,
                         required: true
                     },
                     email: {
@@ -133,7 +134,7 @@ var FormValidation = function () {
                     },
                 },
 
-                invalidHandler: function (event, validator) { //display error alert on form submit              
+                invalidHandler: function (event, validator) { //display error alert on form submit
                     success2.hide();
                     error2.show();
                     Metronic.scrollTo(error2, -200);
@@ -141,17 +142,17 @@ var FormValidation = function () {
 
                 errorPlacement: function (error, element) { // render error placement for each input type
                     var icon = $(element).parent('.input-icon').children('i');
-                    icon.removeClass('fa-check').addClass("fa-warning");  
+                    icon.removeClass('fa-check').addClass("fa-warning");
                     icon.attr("data-original-title", error.text()).tooltip({'container': 'body'});
                 },
 
                 highlight: function (element) { // hightlight error inputs
                     $(element)
-                        .closest('.form-group').removeClass("has-success").addClass('has-error'); // set error class to the control group   
+                        .closest('.form-group').removeClass("has-success").addClass('has-error'); // set error class to the control group
                 },
 
                 unhighlight: function (element) { // revert the change done by hightlight
-                    
+
                 },
 
                 success: function (label, element) {
@@ -172,7 +173,7 @@ var FormValidation = function () {
 
     // advance validation
     var handleValidation3 = function() {
-        // for more info visit the official plugin documentation: 
+        // for more info visit the official plugin documentation:
         // http://docs.jquery.com/Plugins/Validation
 
             var form3 = $('#form_sample_3');
@@ -192,46 +193,68 @@ var FormValidation = function () {
                 focusInvalid: false, // do not focus the last invalid input
                 ignore: "", // validate all fields including form hidden input
                 rules: {
-                    name: {
-                        minlength: 2,
-                        required: true
-                    },
-                    email: {
+//////////////////////////////////////camera form /////////////////////////////////////////////////////
+                    cam_id: {
+                        minlength: 1,
+                        maxlength: 11,
                         required: true,
-                        email: true
-                    },  
-                    options1: {
-                        required: true
+                        number: true
                     },
-                    options2: {
-                        required: true
-                    },
-                    select2tags: {
-                        required: true
-                    },
-                    datepicker: {
-                        required: true
-                    },
-                    occupation: {
+                    cam_name: {
+                        required: true,
                         minlength: 5,
                     },
-                    membership: {
+                    cam_url: {
+                        url:true,
                         required: true
                     },
-                    service: {
+                    cam_ip: {
                         required: true,
-                        minlength: 2
+                        validIP:true
                     },
-                    markdown: {
-                        required: true
+                    location_lng: {
+                        required: true,
+                        number:true
                     },
-                    editor1: {
-                        required: true
+                    location_lat: {
+                        required: true,
+                        number:true
                     },
-                    editor2: {
-                        required: true
-                    }
-                },
+///////////////////////////////////// crossroad form //////////////////////////////////////////////////
+                    c_id: {
+                      minlength: 1,
+                      maxlength: 11,
+                      required: true,
+                      number: true
+                    },
+                    c_name: {
+                        required: true,
+                        minlength: 4
+                    },
+///////////////////////////////////// trafficlight form //////////////////////////////////////////////////
+                    tl_id: {
+                      minlength: 1,
+                      maxlength: 11,
+                      required: true,
+                      number: true
+                    },
+///////////////////////////////////// event form //////////////////////////////////////////////////
+                    event_name:{
+                      minlength: 4,
+                      maxlength: 100,
+                      required: true
+                    },
+                    event_description: {
+                      minlength: 4,
+                      maxlength: 200,
+                      required: true
+                    },
+                    event_source:{
+                      minlength: 4,
+                      maxlength: 30,
+                      required: true
+                    },
+                  },
 
                 messages: { // custom messages for radio buttons and checkboxes
                     membership: {
@@ -246,22 +269,22 @@ var FormValidation = function () {
                 errorPlacement: function (error, element) { // render error placement for each input type
                     if (element.parent(".input-group").size() > 0) {
                         error.insertAfter(element.parent(".input-group"));
-                    } else if (element.attr("data-error-container")) { 
+                    } else if (element.attr("data-error-container")) {
                         error.appendTo(element.attr("data-error-container"));
-                    } else if (element.parents('.radio-list').size() > 0) { 
+                    } else if (element.parents('.radio-list').size() > 0) {
                         error.appendTo(element.parents('.radio-list').attr("data-error-container"));
-                    } else if (element.parents('.radio-inline').size() > 0) { 
+                    } else if (element.parents('.radio-inline').size() > 0) {
                         error.appendTo(element.parents('.radio-inline').attr("data-error-container"));
                     } else if (element.parents('.checkbox-list').size() > 0) {
                         error.appendTo(element.parents('.checkbox-list').attr("data-error-container"));
-                    } else if (element.parents('.checkbox-inline').size() > 0) { 
+                    } else if (element.parents('.checkbox-inline').size() > 0) {
                         error.appendTo(element.parents('.checkbox-inline').attr("data-error-container"));
                     } else {
                         error.insertAfter(element); // for other inputs, just perform default behavior
                     }
                 },
 
-                invalidHandler: function (event, validator) { //display error alert on form submit   
+                invalidHandler: function (event, validator) { //display error alert on form submit
                     success3.hide();
                     error3.show();
                     Metronic.scrollTo(error3, -200);
@@ -297,7 +320,7 @@ var FormValidation = function () {
 
             // initialize select2 tags
             $("#select2_tags").change(function() {
-                form3.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input 
+                form3.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             }).select2({
                 tags: ["red", "green", "blue", "yellow", "pink"]
             });
@@ -308,13 +331,26 @@ var FormValidation = function () {
                 autoclose: true
             });
             $('.date-picker .form-control').change(function() {
-                form3.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input 
+                form3.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             })
+            //Validation ip address
+        jQuery.validator.addMethod('validIP', function(value) {
+            var split = value.split('.');
+            if (split.length != 4)
+                return false;
+
+            for (var i=0; i<split.length; i++) {
+                var s = split[i];
+                if (s.length==0 || isNaN(s) || s<0 || s>255)
+                    return false;
+            }
+            return true;
+        }, ' Invalid IP Address');
     }
 
     var handleWysihtml5 = function() {
         if (!jQuery().wysihtml5) {
-            
+
             return;
         }
 
@@ -330,8 +366,8 @@ var FormValidation = function () {
         init: function () {
 
             handleWysihtml5();
-            handleValidation1();
-            handleValidation2();
+            //handleValidation1();
+            //handleValidation2();
             handleValidation3();
 
         }
